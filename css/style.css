@@ -5,6 +5,9 @@ body  {
 nav{
     background-color: #424242;
     padding: 2px;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 .content
 {
@@ -12,23 +15,23 @@ nav{
     justify-content: center;
     align-items: center;
     color: white;
-    height: 43px;
-    width: 1024px;
-    margin-right: auto;
-    margin-left: auto;
+    flex-wrap: wrap;
 }
 .title{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 700;
+   font-size: 1vw;
+
 }
 ul{
     display: flex;
    align-items: center;
    justify-content: space-between;
-
+    flex-wrap: wrap;
    width: 300px;
    margin-left: 100px;
    list-style-type: none;
+   /* font-size: 2vw; */
 }
  ul li {
      margin-right: auto;
@@ -55,11 +58,13 @@ ul a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    /* background-origin: border-box; */
     margin: 25px 10px 0px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .titleAndIcons{
@@ -71,8 +76,8 @@ ul a {
 }
 .section1 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-     font-size: 4em;
+    font-size: 5vw;
+    
     font-style: italic;
     font-weight: 100;
     margin-right: 17px;
@@ -106,4 +111,160 @@ ul a {
      background-color: black;
      letter-spacing: 2px;
      box-shadow: 1px 2px 8px black;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    height: 100vh;
+    margin: 18px;
+    /* border: 1px solid black; */
+    position: relative;
+}
+.section2 .articles {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    
+
+}
+.section2 .articles .title h2 {
+    font-size: 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 2px 4px 8px black;
+}
+.section2 .articles .description
+{
+
+    width: 50%;
+
+
+}
+.section2 .articles .description p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    font-size: 0.9em;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.section2 .categories {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+}
+.section2 .card {
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    height: 400px;
+    width: 275px;
+    box-shadow: 2px 2px 8px black;
+    margin: 0px 12px 0px 12px;
+    transition: width 1s;
+}
+.section2 .card:hover {
+  
+    width: 500px;
+}
+
+
+.section2 .card .img-phone {
+    background-image: url(/images/phones/phones.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-origin: border-box; */
+    height: 200px;
+    border-top-left-radius: 15px;
+    opacity: 0.8;
+    border-top-right-radius: 15px;
+}
+.section2 .card .img-tv{
+ 
+    background-image: url(/images/Tv/samsung-tv-tutoriel-application-792x509.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-origin: border-box; */
+    height: 200px;
+    border-top-left-radius: 15px;
+    opacity: 0.8;
+    border-top-right-radius: 15px;
+    
+}
+
+.section2 .card .img-pc{
+ 
+    background-image: url(/images/pc/meilleurs-pc-portables.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-origin: border-box; */
+    height: 200px;
+    border-top-left-radius: 15px;
+    opacity: 0.8;
+    border-top-right-radius: 15px;
+}
+
+.section2 .card .img-clothes {
+    background-image: url(/images/clothes/pexels-kai-pilger-996329.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-origin: border-box; */
+    height: 200px;
+    border-top-left-radius: 15px;
+    opacity: 0.8;
+    border-top-right-radius: 15px;
+}
+
+.section2 .card .img-accessories{
+     background-image: url(/images/accesories/pexels-artem-beliaikin-895849.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-origin: border-box; */
+    height: 200px;
+    border-top-left-radius: 15px;
+    opacity: 0.8;
+    border-top-right-radius: 15px;
+}
+
+.section2 .card .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 25vh;
+    margin: 10px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.section2 .card .description p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.section2 .card .description a {
+    text-decoration: none;
+    border:none;
+    background-color: #008CBA;;
+    box-shadow: 2px 2px 8px black;
+    border-radius: 15px;
+    color: white;
+    width: 100px;
+    padding: 10px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    
 }
